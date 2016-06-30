@@ -6,4 +6,4 @@ from django.db import models
 
 class Gato (models.Model):
     name = models.CharField(max_length=255)
-    patas = models.ImageField(default=4)
+    patas = models.IntegerField(default=4)
