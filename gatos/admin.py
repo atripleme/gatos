@@ -5,6 +5,3 @@ from .models import Gato
 @admin.register(Gato)
 class GatoAdmin(admin.ModelAdmin):
     list_display = ('name', 'patas',)
-
-    def __str__(self):
-        return self.name
