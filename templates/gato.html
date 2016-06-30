@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ title }}</title>
 </head>
 <body>
-
+    <ul>
+        {% if gatos %}
+            <h1>Sí hay gatos</h1>
+            {% for gato in gatos %}
+                <li>{{ gato.name }} | {{ gato.patas }}</li>
+            {% endfor %}
+        {% else %}
+            <h1>No hay gatos</h1>
+        {% endif %}
+    </ul>
 </body>
 </html>
