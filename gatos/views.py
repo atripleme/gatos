@@ -10,7 +10,7 @@ def gato(request):
     template = loader.get_template('gato.html')
     title = 'Los gatos son cool'
     context = {
-        'gatos' = gatos,
-        'title' = title
+        'gatos': gatos,
+        'title': title
     }
     return HttpResponse(template.render(context, request))
