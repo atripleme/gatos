@@ -1,3 +1,21 @@
+{% extends "base.html" %}
+
+{% block page_title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    {% if gatos %}
+        <h1>Sí hay gatos</h1>
+            {% for gato in gatos %}
+                <li>{{ gato.name }} | {{ gato.patas }}</li>
+            {% endfor %}
+        {% else %}
+            <h1>No hay gatos</h1>
+    {% endif %}
+{% endblock %}
+
+{% comment %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,4 +34,4 @@
         {% endif %}
     </ul>
 </body>
-</html>
+</html>{% endcomment %}
